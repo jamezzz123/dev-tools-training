@@ -20,12 +20,5 @@ var app = new Vue({
              document.querySelector("p").classList.add('text-danger')
          },
         
-
     },
 })
-
-// todos: [
-//     { text: 'Learn JavaScript' },
-//     { text: 'Learn Vue' },
-//     { text: 'Build something awesome' }
-// ]
