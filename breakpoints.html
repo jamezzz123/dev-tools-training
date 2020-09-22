@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Inspect Element</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,300;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Source Panel</h1>
+        <h3>Things w'll be Learning</h3>
+        <ol type="1">
+            <li>Overview of the Source Panel</li>
+            <li>Debugging Js Code</li>
+            <li>Setting break point</li>
+        </ol>
+        <div id="app">
+            {{ message }}
+             <ol type="1">
+                 <li v-for="todo in todos">
+                     {{ todo }}
+                 </li>
+                 <!-- <li>Overview of the Source Panel</li>
+                 <li>Debugging Js Code</li>
+                 <li>Setting break point</li> -->
+             </ol>
+             <form class="form-inline">
+                 <div class="form-group mx-sm-3 mb-2">
+                     <input type="text" v-model="todo" class="form-control"  placeholder="Todo">
+                 </div>
+                 <button  @click.prevent="addTodo" class="btn btn-primary mb-2">Add +</button>
+             </form>
+             <div class="row">
+                 <div class="col">
+                  <h1>DOM breakpoint</h1>
+                  <p>set DOM breakpoint to puase on various DOM modification</p>
+                  <button @click.prevent="editH1" class="btn btn-primary mb-2">DOM Breakpoint for subtree Modification</button>
+                  <button @click.prevent="editSubtree" class="btn btn-primary mb-2">DOM Breakpoint for atrribute
+                      Modification</button>
+                 </div>
+             </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/breakpoint.js"></script>
+</body>
+
+</html>

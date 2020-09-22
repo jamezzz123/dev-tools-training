@@ -1,0 +1,14 @@
+body {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.border-dash {
+    border-color: aqua;
+    border-style: dashed;
+}
+
+.btn-hover:hover {
+    background-color: transparent;
+    color: black;
+    box-shadow: 0 0 11px rgba(255, 193, 7, .1);
+}
